@@ -1,0 +1,15 @@
+{
+    "name": "sk/developertest",
+    "description": "This module developed to restrict product from add to cart for blocked countries",
+    "type": "magento2-module",
+    "require-dev": {
+        "magento/magento-coding-standard": "^31.0"
+    },
+    "version": "1.0.0",
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "SK\\DeveloperTest\\": ""
+        }
+    }
+}

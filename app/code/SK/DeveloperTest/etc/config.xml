@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--
+/**
+* Copyright © Magento All rights reserved.
+* See COPYING.txt for license details.
+* @author Sonali Kosrabe <sonalikosrabe@outlook.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <developertest>
+            <general>
+                <enabled>1</enabled>
+                <error_message>I'm sorry, this product cannot be ordered from %1.</error_message>
+                <checkout_error_message>You can\'t order %1 in %2.</checkout_error_message>
+            </general>
+            <api_details>
+                <url>http://api.ipapi.com/api/</url>
+                <access_key>add_your_access_key</access_key>
+            </api_details>
+        </developertest>
+    </default>
+</config>

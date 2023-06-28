@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+* Copyright © Magento All rights reserved.
+* See COPYING.txt for license details.
+* @author Sonali Kosrabe <sonalikosrabe@outlook.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_before">
+        <observer name="sk_sales_order_place_before"
+                  instance="SK\DeveloperTest\Observer\OrderPlaceBefore"/>
+    </event>
+</config>

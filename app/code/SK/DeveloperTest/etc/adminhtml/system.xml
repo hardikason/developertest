@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © Magento All rights reserved.
+* See COPYING.txt for license details.
+* @author Sonali Kosrabe <sonalikosrabe@outlook.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="modules" translate="label" sortOrder="999">
+			<label>Restrict Country API Module</label>
+		</tab>
+        <section id="developertest" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Restrict Product Purchase</label>
+			<tab>modules</tab>
+			<resource>SK_DeveloperTest::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Module Configuration</label>
+                <field id="enabled" type="select" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="error_message" type="text" showInDefault="1" showInWebsite="1"
+                       showInStore="1" sortOrder="2">
+                    <label>Add Error Message to display on Product Page</label>
+                </field>
+                <field id="checkout_error_message" type="text" showInDefault="1" showInWebsite="1"
+                       showInStore="1" sortOrder="3">
+                    <label>Add Error Message to display on Checkout Page</label>
+                </field>
+            </group>
+            <group id="api_details" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>API Configuration</label>
+                <field id="url" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="1">
+                    <label>Add API URL</label>
+                </field>
+                <field id="access_key" type="obscure" showInDefault="1" showInWebsite="1"
+                       showInStore="1" sortOrder="2">
+                    <label>Add Access Key for authentication</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="block_specific_ip" type="text" showInDefault="1" showInWebsite="1"
+                       showInStore="1" sortOrder="2">
+                    <label>Add IP address</label>
+                    <comment>Add specific IP to block. Leave empty if want to check with visitors/customers IP
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

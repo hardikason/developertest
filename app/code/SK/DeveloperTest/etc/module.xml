@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © Magento All rights reserved.
+* See COPYING.txt for license details.
+* @author Sonali Kosrabe <sonalikosrabe@outlook.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ProductOptions/etc/module.xsd">
+	<module name="SK_DeveloperTest" setup_version="1.0.0" schema_version="1.0.0">
+		<sequence>
+			<module name="Magento_Catalog"/>
+			<module name="Magento_Checkout"/>
+		</sequence>
+	</module>
+</config>

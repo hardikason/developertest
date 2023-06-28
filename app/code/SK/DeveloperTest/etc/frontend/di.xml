@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © Magento All rights reserved.
+* See COPYING.txt for license details.
+* @author Sonali Kosrabe <sonalikosrabe@outlook.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="checkoutLayoutProcessorPlugin" sortOrder="10"
+                type="SK\DeveloperTest\Plugin\Checkout\LayoutProcessorPlugin"/>
+    </type>
+
+    <type name="Magento\Quote\Model\Quote">
+        <plugin name="restrictAddToCartProduct"
+                type="SK\DeveloperTest\Plugin\Model\Quote\QuotePlugin" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="Magento\Checkout\Controller\Index\Index">
+        <plugin name="restrictProceedToCheckout" type="SK\DeveloperTest\Plugin\Checkout\Controller\ProceedToCheckoutPlugin"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Cart\Index">
+        <plugin name="checkoutErrorMessage" type="SK\DeveloperTest\Plugin\Checkout\Controller\CartErrorMessagePlugin"/>
+    </type>
+
+</config>
