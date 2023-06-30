@@ -73,7 +73,10 @@ class LayoutLoadBeforeObserver implements ObserverInterface
             if ($moduleEnabled) {
                 $customerLocationInfo = $this->storageInterface->getData('customer_location');
 
-                $decodedResponse = $this->dataHelper->unserializeData($customerLocationInfo);
+                $decodedResponse = [];
+                if ($customerLocationInfo) {
+                    $decodedResponse = $this->dataHelper->unserializeData($customerLocationInfo);
+                }
 
                 if (!$customerLocationInfo
                     || (isset($decodedResponse['success']) && $decodedResponse['success'] == false)) {

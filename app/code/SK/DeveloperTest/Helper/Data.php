@@ -186,7 +186,8 @@ class Data extends AbstractHelper
 
                     $itemName = $item->getName();
                     if ($product->getTypeId() == 'configurable') {
-                        $_itemOptions = $item->getProduct()->getTypeInstance(true)->getOrderOptions($item->getProduct());
+                        $_itemOptions = $item->getProduct()->getTypeInstance(true)
+                                                ->getOrderOptions($item->getProduct());
                         $itemName = $_itemOptions['simple_name'];
                     }
                     $productNames[] = $itemName;
